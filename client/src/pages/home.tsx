@@ -213,7 +213,7 @@ export default function Home() {
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="border-b py-8 sm:py-12 md:py-16 pt-[29px] pb-[29px]">
+        <section id="services" className="border-b py-8 sm:py-12 md:py-16 pt-[0px] pb-[0px]">
           <Container>
             <SectionTitle 
               eyebrow="Our Services" 
