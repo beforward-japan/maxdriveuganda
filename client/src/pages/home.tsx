@@ -429,7 +429,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-8 sm:py-12 md:py-16">
+        <section id="contact" className="py-8 sm:py-12 md:py-16 pt-[24px] pb-[24px]">
           <Container>
             <SectionTitle 
               eyebrow="Get Started" 
