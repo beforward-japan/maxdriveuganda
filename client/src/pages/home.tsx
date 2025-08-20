@@ -126,7 +126,6 @@ export default function Home() {
           </div>
         </Container>
       </header>
-
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden border-b">
@@ -138,9 +137,8 @@ export default function Home() {
                 transition={{ duration: 0.6 }} 
                 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
                 data-testid="text-hero-title"
-              >
-                From Dreams to Wheels — Vehicle Import, Done Right.
-              </motion.h1>
+              >From Dreams to Wheels,
+              Vehicle Import, Done Right.</motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
@@ -455,7 +453,6 @@ export default function Home() {
           </Container>
         </section>
       </main>
-
       {/* FOOTER */}
       <footer className="border-t bg-muted/30">
         <Container className="py-12">
