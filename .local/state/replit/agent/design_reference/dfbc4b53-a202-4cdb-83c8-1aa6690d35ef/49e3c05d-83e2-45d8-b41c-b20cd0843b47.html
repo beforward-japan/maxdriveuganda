@@ -1,0 +1,537 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Drive Uganda — Buy & Import Your Next Car</title>
+    <meta name="description" content="Max Drive Uganda Limited — sourcing, inspection, shipping, customs clearing, and registration with transparent quotations. Manual bank payments only." />
+    <meta property="og:title" content="Max Drive Uganda — Transparent Vehicle Import" />
+    <meta property="og:description" content="Source, ship, clear, and register — full price transparency and official bank payments only." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Max Drive Uganda" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: "hsl(0, 0%, 100%)",
+                        foreground: "hsl(222.2, 84%, 4.9%)",
+                        muted: { 
+                            DEFAULT: "hsl(210, 40%, 96.1%)", 
+                            foreground: "hsl(215.4, 16.3%, 46.9%)" 
+                        },
+                        primary: { 
+                            DEFAULT: "hsl(222.2, 47.4%, 11.2%)", 
+                            foreground: "hsl(210, 40%, 98%)" 
+                        },
+                        card: { 
+                            DEFAULT: "#ffffff", 
+                            foreground: "hsl(222.2, 84%, 4.9%)" 
+                        },
+                    },
+                    borderRadius: { 
+                        '2xl': '1rem' 
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+        /* Custom animations to simulate Framer Motion */
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .btn-hover {
+            transition: all 0.2s ease;
+        }
+
+        .btn-hover:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Backdrop blur fallback */
+        .backdrop-blur-fallback {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40 w-full border-b backdrop-blur-fallback">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="h-9 w-9 rounded-2xl bg-primary/10 flex items-center justify-center">
+                        <i data-lucide="car" class="h-5 w-5 text-primary"></i>
+                    </div>
+                    <span class="text-lg font-bold tracking-tight">Max Drive Uganda Ltd</span>
+                </div>
+                <nav class="hidden items-center gap-6 md:flex">
+                    <a href="#services" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
+                    <a href="#process" class="text-sm text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
+                    <a href="#trust" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Trust</a>
+                    <a href="#contact" class="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <a href="#quote" class="hidden rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm btn-hover md:inline-block">Request a Quote</a>
+                    <a href="https://wa.me/256708914167" target="_blank" rel="noreferrer" class="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-muted transition-colors">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden border-b">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-2 md:py-24">
+                <div>
+                    <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl fade-in-up">
+                        Buy & Import Your Next Car — Simple, Transparent, Trusted.
+                    </h1>
+                    <p class="mt-4 max-w-xl text-base text-muted-foreground fade-in-up" style="animation-delay: 0.1s;">
+                        Max Drive Uganda Limited helps you source, inspect, ship, clear, and register vehicles with full price transparency. No hidden costs, ever. Manual payments only via our official bank accounts.
+                    </p>
+                    <div class="mt-6 flex flex-wrap items-center gap-3 fade-in-up" style="animation-delay: 0.2s;">
+                        <a href="#quote" class="inline-flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm btn-hover">
+                            Get an Instant Estimate 
+                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </a>
+                        <a href="https://wa.me/256708914167" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:bg-muted transition-colors">
+                            Chat on WhatsApp 
+                            <i data-lucide="phone" class="h-4 w-4"></i>
+                        </a>
+                    </div>
+                    <div class="mt-8 grid grid-cols-3 gap-4 sm:max-w-lg fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="rounded-2xl bg-muted p-6 text-center shadow-sm">
+                            <p class="text-3xl font-bold">10+</p>
+                            <p class="mt-1 text-sm text-muted-foreground">Years running</p>
+                        </div>
+                        <div class="rounded-2xl bg-muted p-6 text-center shadow-sm">
+                            <p class="text-3xl font-bold">1,000+</p>
+                            <p class="mt-1 text-sm text-muted-foreground">Vehicles delivered</p>
+                        </div>
+                        <div class="rounded-2xl bg-muted p-6 text-center shadow-sm">
+                            <p class="text-3xl font-bold">&lt; 5 min</p>
+                            <p class="mt-1 text-sm text-muted-foreground">Avg. quote time</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in-up" style="animation-delay: 0.4s;">
+                    <!-- Professional automotive showroom image -->
+                    <div class="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1600&auto=format&fit=crop" alt="Professional vehicle import showroom with quality cars" class="h-full w-full object-cover" loading="lazy" />
+                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="border-b py-16 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <p class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">What we do</p>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">End‑to‑end vehicle import & registration</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">From sourcing to number plates, we handle every step with transparent pricing and reliable timelines.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="car" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Vehicle Sourcing</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">We help you choose the right car based on budget, mileage, and reliability history.</p>
+                </div>
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="shield-check" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Inspections</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">Independent inspections and condition verification before shipping.</p>
+                </div>
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="ship" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Shipping & Clearing</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">Efficient RoRo or container shipping, customs clearance, and port handling.</p>
+                </div>
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="clipboard-list" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Transparent Quotation</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">Full breakdown of taxes and fees, including the 1% Import Declaration Fee (IDF).</p>
+                </div>
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="banknote" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Registration & Plates</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">URBS registration, number plates, and delivery with all documents.</p>
+                </div>
+                <div class="group rounded-2xl border bg-card p-6 shadow-sm card-hover">
+                    <div class="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary">
+                        <i data-lucide="check-circle-2" class="h-6 w-6"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">After‑sales Support</h3>
+                    <p class="mt-2 text-sm text-muted-foreground">We remain available for parts guidance and service recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="border-b py-16 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <p class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">How it works</p>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">A simple, proven 5‑step process</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">Clarity at each stage. You always know the exact next step and the exact cost.</p>
+            </div>
+            <ol class="grid grid-cols-1 gap-6 md:grid-cols-5">
+                <li class="relative rounded-2xl border bg-card p-5 shadow-sm card-hover">
+                    <span class="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">1</span>
+                    <h4 class="mt-3 text-base font-semibold">Tell us what you want</h4>
+                    <p class="mt-2 text-sm text-muted-foreground">Share the car link or specs, destination city, and timeline.</p>
+                </li>
+                <li class="relative rounded-2xl border bg-card p-5 shadow-sm card-hover">
+                    <span class="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">2</span>
+                    <h4 class="mt-3 text-base font-semibold">We source & verify</h4>
+                    <p class="mt-2 text-sm text-muted-foreground">We confirm condition, negotiate best C&F, and advise on options.</p>
+                </li>
+                <li class="relative rounded-2xl border bg-card p-5 shadow-sm card-hover">
+                    <span class="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">3</span>
+                    <h4 class="mt-3 text-base font-semibold">Clear & ship</h4>
+                    <p class="mt-2 text-sm text-muted-foreground">Seamless shipping and customs handling by our team.</p>
+                </li>
+                <li class="relative rounded-2xl border bg-card p-5 shadow-sm card-hover">
+                    <span class="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">4</span>
+                    <h4 class="mt-3 text-base font-semibold">Transparent quotation</h4>
+                    <p class="mt-2 text-sm text-muted-foreground">Full tax/fee breakdown including the 1% IDF—no surprises.</p>
+                </li>
+                <li class="relative rounded-2xl border bg-card p-5 shadow-sm card-hover">
+                    <span class="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">5</span>
+                    <h4 class="mt-3 text-base font-semibold">Collect your car</h4>
+                    <p class="mt-2 text-sm text-muted-foreground">Registration & number plates arranged; handover with documents.</p>
+                </li>
+            </ol>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+                <a href="#quote" class="rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm btn-hover">Start Your Quote</a>
+                <a href="#trust" class="rounded-2xl border px-5 py-3 font-semibold hover:bg-muted transition-colors">Why choose Max Drive?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & PAYMENT POLICY SECTION -->
+    <section id="trust" class="border-b py-16 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <p class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">Trust & Safety</p>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Payments only to our official bank accounts</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">We never request payments to personal numbers or third‑party accounts. All TT and bank charges are borne by the client. Keep your receipt for every payment.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="rounded-2xl border bg-card p-6 shadow-sm">
+                    <h3 class="mb-4 text-lg font-semibold">Official Banking Details</h3>
+                    <dl class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">Bank</dt>
+                            <dd class="text-sm font-medium">Diamond Trust Bank (DTB)</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">Account Name</dt>
+                            <dd class="text-sm font-medium">MAX DRIVE UGANDA LIMITED</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">UGX A/C</dt>
+                            <dd class="text-sm font-medium">0270408001</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">USD A/C</dt>
+                            <dd class="text-sm font-medium">0270408002</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">Branch Code</dt>
+                            <dd class="text-sm font-medium">001</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs uppercase tracking-wide text-muted-foreground">Swift Code</dt>
+                            <dd class="text-sm font-medium">DTKEUGKA</dd>
+                        </div>
+                    </dl>
+                    <p class="mt-4 text-sm text-muted-foreground">Payments done to sales staff will not be accepted. Max Drive Uganda Limited will not be liable for any losses from unofficial payments.</p>
+                </div>
+                <div class="rounded-2xl border bg-card p-6 shadow-sm">
+                    <h3 class="mb-4 text-lg font-semibold">Why clients choose us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm text-muted-foreground">10+ years of reliable vehicle import experience</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm text-muted-foreground">Full transparency in quotations and fees</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm text-muted-foreground">Official banking and documented processes</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm text-muted-foreground">Professional inspection and verification</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-sm text-muted-foreground">End-to-end service from purchase to registration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vehicle Gallery Section -->
+            <div class="mt-16">
+                <h3 class="mb-6 text-center text-xl font-semibold">Recently Imported Vehicles</h3>
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- Modern SUV in shipping yard -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800&auto=format&fit=crop" alt="Modern SUV ready for shipping at port facility" class="h-48 w-full object-cover" loading="lazy" />
+                    </div>
+                    <!-- Luxury sedan in container -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=800&auto=format&fit=crop" alt="Luxury sedan being loaded into shipping container" class="h-48 w-full object-cover" loading="lazy" />
+                    </div>
+                    <!-- Vehicle inspection process -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Professional vehicle inspection and quality check process" class="h-48 w-full object-cover" loading="lazy" />
+                    </div>
+                    <!-- Uganda automotive dealership -->
+                    <div class="relative overflow-hidden rounded-2xl shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop" alt="Professional automotive dealership in Uganda with imported vehicles" class="h-48 w-full object-cover" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 md:py-24">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <p class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">Get In Touch</p>
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to import your next vehicle?</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">Contact us today for a transparent quote and reliable service.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <!-- Quote Request Form -->
+                <div id="quote" class="rounded-2xl border bg-card p-8 shadow-sm">
+                    <h3 class="mb-6 text-xl font-semibold">Request Your Quote</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full rounded-xl border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your full name" />
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full rounded-xl border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+256..." />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full rounded-xl border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="your@email.com" />
+                        </div>
+                        <div>
+                            <label for="vehicle" class="block text-sm font-medium mb-2">Vehicle Details</label>
+                            <textarea id="vehicle" name="vehicle" rows="4" class="w-full rounded-xl border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Please provide vehicle details: make, model, year, link to listing, etc."></textarea>
+                        </div>
+                        <div>
+                            <label for="destination" class="block text-sm font-medium mb-2">Destination City</label>
+                            <input type="text" id="destination" name="destination" class="w-full rounded-xl border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Kampala, Entebbe, etc." />
+                        </div>
+                        <button type="submit" class="w-full rounded-xl bg-primary px-6 py-3 font-semibold text-white shadow-sm btn-hover">
+                            Get My Quote
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-6">
+                    <div class="rounded-2xl border bg-card p-6 shadow-sm">
+                        <h4 class="mb-4 text-lg font-semibold">Contact Information</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                                    <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Phone</p>
+                                    <p class="text-sm text-muted-foreground">+256 708 914 167</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                                    <i data-lucide="mail" class="h-5 w-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Email</p>
+                                    <p class="text-sm text-muted-foreground">info@maxdriveuganda.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+                                    <i data-lucide="map-pin" class="h-5 w-5 text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium">Location</p>
+                                    <p class="text-sm text-muted-foreground">Kampala, Uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border bg-card p-6 shadow-sm">
+                        <h4 class="mb-4 text-lg font-semibold">Business Hours</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-sm">Monday - Friday</span>
+                                <span class="text-sm text-muted-foreground">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm">Saturday</span>
+                                <span class="text-sm text-muted-foreground">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-sm">Sunday</span>
+                                <span class="text-sm text-muted-foreground">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl border bg-card p-6 shadow-sm">
+                        <h4 class="mb-4 text-lg font-semibold">Quick Actions</h4>
+                        <div class="space-y-3">
+                            <a href="https://wa.me/256708914167" target="_blank" rel="noreferrer" class="flex w-full items-center justify-center gap-2 rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm font-semibold text-green-700 hover:bg-green-100 transition-colors">
+                                <i data-lucide="message-circle" class="h-4 w-4"></i>
+                                WhatsApp Us
+                            </a>
+                            <a href="tel:+256708914167" class="flex w-full items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-semibold hover:bg-muted transition-colors">
+                                <i data-lucide="phone" class="h-4 w-4"></i>
+                                Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t bg-muted/30">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="py-12">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+                    <div class="md:col-span-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="h-9 w-9 rounded-2xl bg-primary/10 flex items-center justify-center">
+                                <i data-lucide="car" class="h-5 w-5 text-primary"></i>
+                            </div>
+                            <span class="text-lg font-bold tracking-tight">Max Drive Uganda Ltd</span>
+                        </div>
+                        <p class="text-sm text-muted-foreground max-w-md">
+                            Your trusted partner for transparent vehicle importation services in Uganda. Professional, reliable, and completely transparent.
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-3">Services</h5>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li><a href="#services" class="hover:text-foreground transition-colors">Vehicle Sourcing</a></li>
+                            <li><a href="#services" class="hover:text-foreground transition-colors">Inspections</a></li>
+                            <li><a href="#services" class="hover:text-foreground transition-colors">Shipping & Clearing</a></li>
+                            <li><a href="#services" class="hover:text-foreground transition-colors">Registration</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold mb-3">Contact</h5>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li>+256 708 914 167</li>
+                            <li>info@maxdriveuganda.com</li>
+                            <li>Kampala, Uganda</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+                    <p>&copy; 2024 Max Drive Uganda Limited. All rights reserved. | Professional vehicle import services with transparent pricing.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // TODO: Implement form submission logic
+        // TODO: Add form validation
+        // TODO: Integrate with backend API for quote requests
+        // TODO: Add mobile menu toggle functionality
+        
+        // Smooth scrolling for anchor links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Simple form submission placeholder
+        (function() {
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Replace with actual form submission logic
+                    alert('Thank you for your interest! We will contact you within 24 hours with your detailed quote.');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

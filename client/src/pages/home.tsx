@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import FAQ from "@/components/FAQ";
+import QuoteModal from "@/components/QuoteModal";
+import CarouselLite from "@/components/CarouselLite";
 import { motion } from "framer-motion";
 import { 
   Car, 
@@ -112,6 +115,8 @@ const partnerships = [
 ];
 
 export default function Home() {
+  const [quoteOpen, setQuoteOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* NAVBAR */}
@@ -128,13 +133,9 @@ export default function Home() {
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
           </nav>
           <div className="flex items-center gap-2">
-            <a 
-              href={QUOTE_LINK} 
-              className="hidden rounded-xl bg-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-opacity lg:inline-block"
-              data-testid="button-request-quote-nav"
-            >
+            <button onClick={()=>setQuoteOpen(true)} className="hidden rounded-xl bg-primary px-3 sm:px-5 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-opacity lg:inline-block" data-testid="button-request-quote-nav">
               Request a Quote
-            </a>
+            </button>
             <a 
               href={WHATSAPP_LINK} 
               target="_blank" 
@@ -150,7 +151,7 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden border-b">
-          <Container className="py-8 sm:py-12 md:py-16 lg:py-20">
+          <Container className="py-6 sm:py-7 md:py-10 lg:py-14">
             <div className="text-center">
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }} 
@@ -175,13 +176,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }} 
                 className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
               >
-                <a 
-                  href={QUOTE_LINK} 
-                  className="inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 font-semibold text-white shadow-sm hover:opacity-90 transition-opacity"
-                  data-testid="button-get-quotation"
-                >
-                  Get a Transparent Quotation <ArrowRight className="h-4 w-4" />
-                </a>
+                <button onClick={()=>setQuoteOpen(true)} className="inline-flex items-center gap-2 rounded-xl bg-primary px-3 sm:px-5 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-sm hover:opacity-90 transition-opacity" data-testid="button-get-quotation">
+                  Get a Transparent Car Quote <ArrowRight className="h-4 w-4" />
+                </button>
                 <a 
                   href={WHATSAPP_LINK} 
                   target="_blank" 
@@ -208,12 +205,16 @@ export default function Home() {
                   +256 708 914 167
                 </a>
               </motion.div>
+            
+            <div className="mt-6 sm:mt-8">
+              <CarouselLite images={["/cars/1.jpg","/cars/2.jpg","/cars/3.jpg"]} interval={5000} height="420px" />
             </div>
+</div>
           </Container>
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="border-b py-8 sm:py-12 md:py-16 pt-[0px] pb-[0px]">
+        <section id="services" className="border-b py-6 sm:py-8 md:py-12 pt-[0px] pb-[0px]">
           <Container>
             <SectionTitle 
               eyebrow="Our Services" 
@@ -240,7 +241,7 @@ export default function Home() {
         </section>
 
         {/* PROCESS */}
-        <section id="process" className="border-b py-8 sm:py-12 md:py-16 pt-[34px] pb-[34px]">
+        <section id="process" className="border-b py-6 sm:py-8 md:py-12 py-6">
           <Container>
             <SectionTitle 
               eyebrow="How it works" 
@@ -269,7 +270,7 @@ export default function Home() {
         </section>
 
         {/* PARTNERSHIPS */}
-        <section id="partners" className="border-b py-8 sm:py-12 md:py-16 bg-muted/30 pt-[24px] pb-[24px]">
+        <section id="partners" className="border-b py-6 sm:py-8 md:py-12 bg-muted/30 pt-[24px] pb-[24px]">
           <Container>
             <SectionTitle 
               eyebrow="Official Partnerships" 
@@ -306,7 +307,7 @@ export default function Home() {
         </section>
 
         {/* TRUST & SAFETY */}
-        <section id="trust" className="border-b py-8 sm:py-12 md:py-16 pt-[24px] pb-[24px]">
+        <section id="trust" className="border-b py-6 sm:py-8 md:py-12 pt-[24px] pb-[24px]">
           <Container>
             <SectionTitle 
               eyebrow="Trust & Safety" 
@@ -429,7 +430,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-8 sm:py-12 md:py-16 pt-[24px] pb-[24px]">
+        <section id="contact" className="py-6 sm:py-8 md:py-12 pt-[24px] pb-[24px]">
           <Container>
             <SectionTitle 
               eyebrow="Get Started" 
@@ -549,6 +550,8 @@ export default function Home() {
             </div>
           </Container>
         </section>
+        <QuoteModal open={quoteOpen} onClose={()=>setQuoteOpen(false)} />
+              <FAQ />
       </main>
       {/* FOOTER */}
       <footer className="border-t bg-muted/30">
