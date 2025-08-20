@@ -172,21 +172,22 @@ export default function Home() {
                   WhatsApp Us <MessageCircle className="h-4 w-4" />
                 </a>
               </motion.div>
-              <motion.p 
+              <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, delay: 0.3 }} 
-                className="mt-4 text-sm text-muted-foreground"
+                className="mt-6 flex items-center justify-center gap-2 rounded-xl border bg-muted/50 px-4 py-3 shadow-sm"
               >
-                or call{" "}
+                <Phone className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-muted-foreground">or call</span>
                 <a 
                   href={`tel:${PHONE_INTL}`} 
-                  className="text-primary hover:underline"
+                  className="text-base font-semibold text-primary hover:text-primary/80 transition-colors"
                   data-testid="link-phone-hero"
                 >
-                  {PHONE_INTL}
+                  +256 708 914 167
                 </a>
-              </motion.p>
+              </motion.div>
             </div>
           </Container>
         </section>
