@@ -306,7 +306,7 @@ export default function Home() {
         </section>
 
         {/* TRUST & SAFETY */}
-        <section id="trust" className="border-b py-8 sm:py-12 md:py-16">
+        <section id="trust" className="border-b py-8 sm:py-12 md:py-16 pt-[24px] pb-[24px]">
           <Container>
             <SectionTitle 
               eyebrow="Trust & Safety" 
