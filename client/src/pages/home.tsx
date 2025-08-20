@@ -23,7 +23,7 @@ import {
 import Logo_PNG from "@assets/Logo PNG.png";
 
 const Container = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>
+  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-[45px] pb-[45px] pl-[36px] pr-[36px] ${className}`}>{children}</div>
 );
 
 const SectionTitle = ({ eyebrow, title, subtitle }: { eyebrow?: string, title: string, subtitle?: string }) => (
