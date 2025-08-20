@@ -476,14 +476,14 @@ export default function Home() {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span>Monday - Friday</span>
-                      <span className="text-muted-foreground">8:00 AM - 6:00 PM</span>
+                      <span className="text-muted-foreground">9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Saturday</span>
-                      <span className="text-muted-foreground">9:00 AM - 4:00 PM</span>
+                      <span className="text-muted-foreground">10:00 AM - 2:00 PM</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Sunday</span>
+                      <span>Sunday & Public Holidays</span>
                       <span className="text-muted-foreground">Closed</span>
                     </div>
                   </div>
