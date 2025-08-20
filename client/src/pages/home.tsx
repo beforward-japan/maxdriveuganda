@@ -27,16 +27,16 @@ import TransfreightLogo from "@assets/Logo-1_1755712653982.png";
 import ConsolbaseLogo from "@assets/Logo-1_1755712677391.png";
 
 const Container = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-[45px] pb-[45px] pl-[36px] pr-[36px] ${className}`}>{children}</div>
+  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 ${className}`}>{children}</div>
 );
 
 const SectionTitle = ({ eyebrow, title, subtitle }: { eyebrow?: string, title: string, subtitle?: string }) => (
-  <div className="mb-10 text-center">
+  <div className="mb-6 sm:mb-8 md:mb-10 text-center">
     {eyebrow && (
       <p className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">{eyebrow}</p>
     )}
-    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-    {subtitle && <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">{subtitle}</p>}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
+    {subtitle && <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-muted-foreground">{subtitle}</p>}
   </div>
 );
 
@@ -55,7 +55,7 @@ const FeatureCard = ({ icon: Icon, title, desc }: { icon: React.ElementType, tit
   </div>
 );
 
-const PHONE_INTL = "+256708914167";
+const PHONE_INTL = "+256 708 914 167";
 const WHATSAPP_LINK = `https://wa.me/256708914167`;
 const QUOTE_LINK = "/quote";
 
@@ -116,11 +116,11 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       {/* NAVBAR */}
       <header className="sticky top-0 z-40 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-white/70">
-        <Container className="flex h-16 items-center justify-between">
+        <Container className="flex h-14 sm:h-16 items-center justify-between">
           <div className="flex items-center">
-            <img src={Logo_PNG} alt="Max Drive Uganda" className="h-8 w-auto object-contain pl-[-52px] pr-[-52px]" />
+            <img src={Logo_PNG} alt="Max Drive Uganda" className="h-6 sm:h-8 w-auto object-contain" />
           </div>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-4 lg:gap-6 md:flex">
             <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
             <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Process</a>
             <a href="#partners" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Partners</a>
@@ -130,7 +130,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <a 
               href={QUOTE_LINK} 
-              className="hidden rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-opacity md:inline-block"
+              className="hidden rounded-xl bg-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold text-white shadow-sm hover:opacity-90 transition-opacity lg:inline-block"
               data-testid="button-request-quote-nav"
             >
               Request a Quote
@@ -139,7 +139,7 @@ export default function Home() {
               href={WHATSAPP_LINK} 
               target="_blank" 
               rel="noreferrer" 
-              className="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-muted transition-colors"
+              className="rounded-xl border px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold hover:bg-muted transition-colors"
               data-testid="button-whatsapp-nav"
             >
               WhatsApp Us
@@ -150,7 +150,7 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden border-b">
-          <Container className="py-16 md:py-24">
+          <Container className="py-12 sm:py-16 md:py-20 lg:py-24">
             <div className="text-center">
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }} 
@@ -213,14 +213,14 @@ export default function Home() {
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="border-b py-16 md:py-24">
+        <section id="services" className="border-b py-12 sm:py-16 md:py-20">
           <Container>
             <SectionTitle 
               eyebrow="Our Services" 
               title="Complete Vehicle Import Solution" 
               subtitle="End-to-end services from sourcing to delivery, with full transparency at every step." 
             />
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service, index) => (
                 <motion.div
                   key={service.title}
@@ -240,14 +240,14 @@ export default function Home() {
         </section>
 
         {/* PROCESS */}
-        <section id="process" className="border-b py-16 md:py-24">
+        <section id="process" className="border-b py-12 sm:py-16 md:py-20">
           <Container>
             <SectionTitle 
               eyebrow="How it works" 
               title="Simple 5-Step Process" 
               subtitle="Clear steps from initial consultation to vehicle delivery and beyond." 
             />
-            <ol className="grid grid-cols-1 gap-6 md:grid-cols-5">
+            <ol className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {steps.map((step, i) => (
                 <motion.li 
                   key={i} 
@@ -269,14 +269,14 @@ export default function Home() {
         </section>
 
         {/* PARTNERSHIPS */}
-        <section id="partners" className="border-b py-16 md:py-24 bg-muted/30">
+        <section id="partners" className="border-b py-12 sm:py-16 md:py-20 bg-muted/30">
           <Container>
             <SectionTitle 
               eyebrow="Official Partnerships" 
               title="Trusted Global Network" 
               subtitle="We work with established partners to ensure reliable sourcing and shipping." 
             />
-            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:grid-cols-4">
               {partnerships.map((partner) => (
                 <motion.a
                   key={partner.name}
@@ -306,7 +306,7 @@ export default function Home() {
         </section>
 
         {/* TRUST & SAFETY */}
-        <section id="trust" className="border-b py-16 md:py-24">
+        <section id="trust" className="border-b py-12 sm:py-16 md:py-20">
           <Container>
             <SectionTitle 
               eyebrow="Trust & Safety" 
@@ -315,7 +315,7 @@ export default function Home() {
             />
             
             {/* Payment Policy Bullets */}
-            <div className="mb-12 rounded-2xl border bg-card p-8 shadow-sm">
+            <div className="mb-8 sm:mb-10 md:mb-12 rounded-2xl border bg-card p-6 sm:p-8 shadow-sm">
               <h3 className="mb-6 text-xl font-semibold text-center">Payment Policy</h3>
               <ul className="space-y-4 max-w-3xl mx-auto">
                 <li className="flex items-start gap-3">
@@ -335,7 +335,7 @@ export default function Home() {
 
             {/* Benefits */}
             <div className="mx-auto max-w-4xl">
-              <div className="rounded-2xl border bg-card p-8 shadow-sm">
+              <div className="rounded-2xl border bg-card p-6 sm:p-8 shadow-sm">
                 <h3 className="mb-8 text-xl font-semibold text-center">Why Choose Max Drive & Vehicle Import</h3>
                 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -429,7 +429,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-16 md:py-24">
+        <section id="contact" className="py-12 sm:py-16 md:py-20">
           <Container>
             <SectionTitle 
               eyebrow="Get Started" 
@@ -513,7 +513,7 @@ export default function Home() {
                       <div>
                         <p className="text-sm font-medium">Email</p>
                         <p className="text-sm text-muted-foreground" data-testid="text-email-contact">
-                          info@maxdriveuganda.com
+                          aliakber@maxdriveug.com
                         </p>
                       </div>
                     </div>
@@ -523,9 +523,15 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-sm font-medium">Location</p>
-                        <p className="text-sm text-muted-foreground" data-testid="text-location-contact">
-                          Kampala, Uganda
-                        </p>
+                        <a 
+                          href="https://maps.app.goo.gl/xcffXXHi2QKQKdiy7" 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="text-sm text-muted-foreground hover:text-foreground transition-colors" 
+                          data-testid="text-location-contact"
+                        >
+                          Ground Floor, Conrad House (Opposite Kitgum House), Jinja Road, Kampala, Uganda
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -550,7 +556,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="Max Drive Uganda" className="h-8 w-auto object-contain" />
+                <img src={Logo_PNG} alt="Max Drive Uganda" className="h-8 w-auto object-contain" />
                 <span className="text-lg font-bold tracking-tight">Max Drive Uganda Ltd</span>
               </div>
               <p className="text-sm text-muted-foreground max-w-md">
@@ -572,7 +578,7 @@ export default function Home() {
               <h5 className="font-semibold mb-3">Contact</h5>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>{PHONE_INTL}</li>
-                <li>info@maxdriveuganda.com</li>
+                <li>aliakber@maxdriveug.com</li>
                 <li>Kampala, Uganda</li>
               </ul>
             </div>
