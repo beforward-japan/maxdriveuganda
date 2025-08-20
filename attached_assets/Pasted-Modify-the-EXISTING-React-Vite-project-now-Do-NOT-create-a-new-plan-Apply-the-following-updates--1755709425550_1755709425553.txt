@@ -1,0 +1,99 @@
+Modify the EXISTING React + Vite project now. Do NOT create a new plan. Apply the following updates end-to-end and run the app. If anything is ambiguous, make sensible defaults and proceed.
+
+BRAND & ASSETS
+- Primary brand color: ORANGE #F97316 (Tailwind “primary”).
+- Use Inter font from Google.
+- I’ve uploaded my logo. Ensure it’s available at /public/logo.png (rename/copy if needed) and used in the navbar.
+- Remove ALL photos/stock images. Icons only.
+
+TAILWIND (Play CDN, no toolchain changes)
+- In index.html <head>, add Tailwind Play CDN + config:
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "hsl(0, 0%, 100%)",
+            foreground: "hsl(222.2, 84%, 4.9%)",
+            muted: { DEFAULT: "hsl(210, 40%, 96.1%)", foreground: "hsl(215.4, 16.3%, 46.9%)" },
+            primary: { DEFAULT: "#F97316", foreground: "#ffffff" },
+            card: { DEFAULT: "#ffffff", foreground: "hsl(222.2,84%,4.9%)" }
+          },
+          borderRadius: { '2xl': '1rem' }
+        }
+      }
+    }
+  </script>
+  (Also add Inter font <link> tags and set body to use Inter.)
+
+DEPENDENCIES
+- Ensure framer-motion and lucide-react are installed and imported where needed. No other UI libs.
+
+PAGE REQUIREMENTS (replace src/App.jsx with a complete page):
+- Sticky navbar: left = logo (/logo.png). Right = anchor links (Services, Process, Partners, Trust, Contact) + primary button “Request a Quote” linking to /quote.
+- HERO (text-only, no images):
+  Title: “From Dreams to Wheels — Vehicle Import, Done Right.”
+  Subtext: “Max Drive Uganda Limited sources, ships, clears, registers, and delivers your vehicle with transparent pricing and official banking only.”
+  Buttons:
+    - Primary → “Get a Transparent Quotation” → /quote
+    - Secondary → “WhatsApp Us” → https://wa.me/256708914167
+  Small line: “or call +256 708 914 167” (tel:+256708914167)
+- SERVICES grid (9 cards, icons only; NO photos), exactly these titles:
+  1) Vehicle Sourcing
+  2) Transparent Quotation
+  3) Pre-shipping Inspection
+  4) Shipping
+  5) Port Clearance & Storage (Mombasa or Tanzania)
+  6) Registration & Number Plates
+  7) Transport — Driven or Car Carrier
+  8) Delivery
+  9) After-Sales Support — Servicing, Car wash, Minor repairs, customisations & add-ons
+  Each card: small lucide icon in a circle (bg-primary/10 text-primary), title, 1-line description.
+- PROCESS (5 steps as cards):
+  1) Tell us your need & budget
+  2) We source & verify options
+  3) Pro-forma & TT
+  4) Shipping & clearance
+  5) Registration, delivery & after-sales
+- OFFICIAL PARTNERSHIPS (as pill tags, no logos):
+  - BeForward Japan
+  - Stanmore Holdings
+  - Transfreight Logistics
+  - Consolbase Limited
+- TRUST & SAFETY (banking policy clearly shown):
+  Bullets:
+    • Payments are accepted only via our official MDL bank accounts or direct TT to Japan.
+    • All TT and bank charges are borne by the client.
+    • Payments to sales staff will not be accepted and MDL will not be liable.
+  Bank details block:
+    • DIAMOND TRUST BANK (DTB)
+    • Account Name: MAX DRIVE UGANDA LIMITED
+    • UGX: 0270408001
+    • USD: 0270408002
+    • Branch code: 001 · Swift: DTKEUGKA
+  Mini benefits list: Transparent quotations; URA-compliant paperwork; End-to-end to number plates.
+- CONTACT section:
+  Primary button: WhatsApp Us → https://wa.me/256708914167
+  Phone link: tel:+256708914167
+  Small note: “Request a quote and we’ll guide you end-to-end.”
+- FOOTER:
+  © {currentYear} Max Drive Uganda Limited
+  Quick links: Home, Services, Process, Partners, Trust, Contact
+  Restate: “Manual payments only via official MDL bank accounts.”
+
+INTERACTIONS & POLISH
+- Use framer-motion for subtle fade/slide reveals on sections/cards.
+- Smooth scrolling for navbar anchors.
+- Focus-visible styles for accessibility; semantic <header><main><section><footer>.
+- Fully responsive; plenty of whitespace; cards use rounded-2xl, light borders, soft hover.
+
+ACCEPTANCE
+- App builds and runs with Replit “Run”, showing a working preview URL.
+- Orange brand applied; logo appears in navbar; no photos used.
+- Services and Partnerships match EXACTLY as listed.
+- Trust & Safety section shows the DTB policy and accounts.
+- Buttons work: /quote link (OK if 404 for now), WhatsApp opens chat, phone link works on mobile.
+
+After implementing, run the project and provide the live preview URL.

@@ -1,0 +1,321 @@
+# Copy–Paste Prompt for Replit (React + Vite + Tailwind CDN)
+
+You are Replit. Create a brand‑new **React + Vite** project named **`mdl-landing`** for *Max Drive Uganda Limited (MDL)* and deliver a fully working, modern landing website with minimal clutter. Use **Tailwind via Play CDN** (no build config). Install only the two extra packages listed. Then run the dev server so I can preview.
+
+---
+
+## 1) Project setup
+
+* Template: **React + Vite** (JavaScript)
+* Add NPM packages:
+
+  * `framer-motion`
+  * `lucide-react`
+* Use **Tailwind CSS via Play CDN** (no Tailwind build step).
+* App language: English. Country context: Uganda.
+
+---
+
+## 2) HTML head (SEO + Tailwind CDN)
+
+Open **`index.html`** and set:
+
+* `<title>`: `Max Drive Uganda — Buy & Import Your Next Car`
+* Add meta description and OG tags.
+* Add Tailwind Play CDN + color config.
+
+Place this inside `<head>` *before* `</head>`:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Max Drive Uganda Limited — sourcing, inspection, shipping, customs clearing, and registration with transparent quotations. Manual bank payments only." />
+<meta property="og:title" content="Max Drive Uganda — Transparent Vehicle Import" />
+<meta property="og:description" content="Source, ship, clear, and register — full price transparency and official bank payments only." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Max Drive Uganda" />
+
+<!-- Tailwind (Play CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          background: "hsl(0, 0%, 100%)",
+          foreground: "hsl(222.2, 84%, 4.9%)",
+          muted: { DEFAULT: "hsl(210, 40%, 96.1%)", foreground: "hsl(215.4, 16.3%, 46.9%)" },
+          primary: { DEFAULT: "hsl(222.2, 47.4%, 11.2%)", foreground: "hsl(210, 40%, 98%)" },
+          card: { DEFAULT: "#ffffff", foreground: "hsl(222.2, 84%, 4.9%)" },
+        },
+        borderRadius: { '2xl': '1rem' }
+      }
+    }
+  }
+</script>
+```
+
+---
+
+## 3) Replace the landing page UI
+
+* In **`src/App.jsx`**, replace all content with the component below.
+* In **`src/main.jsx`**, keep the default Vite render logic.
+* Confirm the two packages are installed (`framer-motion`, `lucide-react`).
+
+**`src/App.jsx`** (replace everything with this):
+
+```jsx
+import React from "react";
+import { motion } from "framer-motion";
+import { Car, Ship, ShieldCheck, ClipboardList, Banknote, Phone, Mail, MapPin, ArrowRight, CheckCircle2 } from "lucide-react";
+
+const Container = ({ children, className = "" }) => (
+  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>
+);
+
+const SectionTitle = ({ eyebrow, title, subtitle }) => (
+  <div className="mb-10 text-center">
+    {eyebrow && (
+      <p className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">{eyebrow}</p>
+    )}
+    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+    {subtitle && <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground">{subtitle}</p>}
+  </div>
+);
+
+const Stat = ({ label, value }) => (
+  <div className="rounded-2xl bg-muted p-6 text-center shadow-sm">
+    <p className="text-3xl font-bold">{value}</p>
+    <p className="mt-1 text-sm text-muted-foreground">{label}</p>
+  </div>
+);
+
+const FeatureCard = ({ icon: Icon, title, desc }) => (
+  <div className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-md">
+    <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary"><Icon className="h-6 w-6" /></div>
+    <h3 className="text-lg font-semibold">{title}</h3>
+    <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+  </div>
+);
+
+const PHONE_INTL = "+256708914167"; // update if needed
+const WHATSAPP_LINK = `https://wa.me/256708914167`;
+const QUOTE_LINK = "/quote"; // placeholder route for the request form
+
+const BANKS = [
+  { label: "Bank", value: "Diamond Trust Bank (DTB)" },
+  { label: "Account Name", value: "MAX DRIVE UGANDA LIMITED" },
+  { label: "UGX A/C", value: "0270408001" },
+  { label: "USD A/C", value: "0270408002" },
+  { label: "Branch Code", value: "001" },
+  { label: "Swift Code", value: "DTKEUGKA" },
+];
+
+const steps = [
+  { title: "Tell us what you want", text: "Share the car link or specs, destination city, and timeline." },
+  { title: "We source & verify", text: "We confirm condition, negotiate best C&F, and advise on options." },
+  { title: "Clear & ship", text: "Seamless shipping and customs handling by our team." },
+  { title: "Transparent quotation", text: "Full tax/fee breakdown including the 1% IDF—no surprises." },
+  { title: "Collect your car", text: "Registration & number plates arranged; handover with documents." },
+];
+
+export default function MDLLanding() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      {/* NAVBAR */}
+      <header className="sticky top-0 z-40 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-white/70">
+        <Container className="flex h-16 items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-2xl bg-primary/10" />
+            <span className="text-lg font-bold tracking-tight">Max Drive Uganda Ltd</span>
+          </div>
+          <nav className="hidden items-center gap-6 md:flex">
+            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground">Services</a>
+            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground">How it Works</a>
+            <a href="#trust" className="text-sm text-muted-foreground hover:text-foreground">Trust</a>
+            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground">Contact</a>
+          </nav>
+          <div className="flex items-center gap-2">
+            <a href={QUOTE_LINK} className="hidden rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90 md:inline-block">Request a Quote</a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-muted">WhatsApp</a>
+          </div>
+        </Container>
+      </header>
+
+      {/* HERO */}
+      <section className="relative overflow-hidden border-b">
+        <Container className="grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-2 md:py-24">
+          <div>
+            <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Buy & Import Your Next Car — Simple, Transparent, Trusted.
+            </motion.h1>
+            <p className="mt-4 max-w-xl text-base text-muted-foreground">
+              Max Drive Uganda Limited helps you source, inspect, ship, clear, and register vehicles with full price transparency. No hidden costs, ever. Manual payments only via our official bank accounts.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <a href={QUOTE_LINK} className="inline-flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm hover:opacity-90">Get an Instant Estimate <ArrowRight className="h-4 w-4" /></a>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-2xl border px-5 py-3 font-semibold hover:bg-muted">Chat on WhatsApp <Phone className="h-4 w-4" /></a>
+            </div>
+            <div className="mt-8 grid grid-cols-3 gap-4 sm:max-w-lg">
+              <Stat label="Years running" value="10+" />
+              <Stat label="Vehicles delivered" value="1,000+" />
+              <Stat label="Avg. quote time" value="> 5 min" />
+            </div>
+          </div>
+          <div>
+            <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl shadow-lg">
+              <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=1600&auto=format&fit=crop" alt="Showroom quality import" className="h-full w-full object-cover" loading="lazy" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="border-b py-16 md:py-24">
+        <Container>
+          <SectionTitle eyebrow="What we do" title="End‑to‑end vehicle import & registration" subtitle="From sourcing to number plates, we handle every step with transparent pricing and reliable timelines." />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <FeatureCard icon={Car} title="Vehicle Sourcing" desc="We help you choose the right car based on budget, mileage, and reliability history." />
+            <FeatureCard icon={ShieldCheck} title="Inspections" desc="Independent inspections and condition verification before shipping." />
+            <FeatureCard icon={Ship} title="Shipping & Clearing" desc="Efficient RoRo or container shipping, customs clearance, and port handling." />
+            <FeatureCard icon={ClipboardList} title="Transparent Quotation" desc="Full breakdown of taxes and fees, including the 1% Import Declaration Fee (IDF)." />
+            <FeatureCard icon={Banknote} title="Registration & Plates" desc="URBS registration, number plates, and delivery with all documents." />
+            <FeatureCard icon={CheckCircle2} title="After‑sales Support" desc="We remain available for parts guidance and service recommendations." />
+          </div>
+        </Container>
+      </section>
+
+      {/* PROCESS */}
+      <section id="process" className="border-b py-16 md:py-24">
+        <Container>
+          <SectionTitle eyebrow="How it works" title="A simple, proven 5‑step process" subtitle="Clarity at each stage. You always know the exact next step and the exact cost." />
+          <ol className="grid grid-cols-1 gap-6 md:grid-cols-5">
+            {steps.map((s, i) => (
+              <li key={i} className="relative rounded-2xl border bg-card p-5 shadow-sm">
+                <span className="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">{i + 1}</span>
+                <h4 className="mt-3 text-base font-semibold">{s.title}</h4>
+                <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <a href={QUOTE_LINK} className="rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm hover:opacity-90">Start Your Quote</a>
+            <a href="#trust" className="rounded-2xl border px-5 py-3 font-semibold hover:bg-muted">Why choose Max Drive?</a>
+          </div>
+        </Container>
+      </section>
+
+      {/* TRUST & PAYMENT POLICY */}
+      <section id="trust" className="border-b py-16 md:py-24">
+        <Container>
+          <SectionTitle eyebrow="Trust & Safety" title="Payments only to our official bank accounts" subtitle="We never request payments to personal numbers or third‑party accounts. All TT and bank charges are borne by the client. Keep your receipt for every payment." />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <h3 className="mb-4 text-lg font-semibold">Official Banking Details</h3>
+              <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {BANKS.map((b) => (
+                  <div key={b.label}>
+                    <dt className="text-xs uppercase tracking-wide text-muted-foreground">{b.label}</dt>
+                    <dd className="text-sm font-medium">{b.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-4 text-sm text-muted-foreground">Payments done to sales staff will not be accepted. Max Drive Uganda Limited will not be liable for any losses from unofficial payments.</p>
+            </div>
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <h3 className="mb-4 text-lg font-semibold">Why clients choose us</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Transparent, line‑by‑line quotations</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Verified vehicles & honest condition reports</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Reliable shipping & customs handling</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Registration & number plates support</li>
+                <li className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 text-primary" /> Local support even after delivery</li>
+              </ul>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a href={QUOTE_LINK} className="rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm hover:opacity-90">Request a Quote</a>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-2xl border px-5 py-3 font-semibold hover:bg-muted">Chat on WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA BANNER */}
+      <section className="border-b bg-muted/30 py-10">
+        <Container className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-white p-6 shadow-sm md:flex-row">
+          <div>
+            <h3 className="text-xl font-semibold">Ready for a clear, all‑in quotation?</h3>
+            <p className="mt-1 text-sm text-muted-foreground">Get an instant estimate and a formal PDF you can download and share.</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href={QUOTE_LINK} className="rounded-2xl bg-primary px-5 py-3 font-semibold text-white shadow-sm hover:opacity-90">Start Now</a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="rounded-2xl border px-5 py-3 font-semibold hover:bg-muted">Ask a Question</a>
+          </div>
+        </Container>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-16 md:py-24">
+        <Container>
+          <SectionTitle eyebrow="Contact" title="Talk to our team" subtitle="We’re available Mon–Sat during business hours. Visits by appointment recommended." />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="mb-2 flex items-center gap-2 font-semibold"><Phone className="h-5 w-5" /> Phone / WhatsApp</div>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="text-sm text-primary hover:underline">{PHONE_INTL}</a>
+            </div>
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="mb-2 flex items-center gap-2 font-semibold"><Mail className="h-5 w-5" /> Email</div>
+              <p className="text-sm text-muted-foreground">info@yourdomain.tld</p>
+            </div>
+            <div className="rounded-2xl border bg-card p-6 shadow-sm">
+              <div className="mb-2 flex items-center gap-2 font-semibold"><MapPin className="h-5 w-5" /> Address</div>
+              <p className="text-sm text-muted-foreground">Kampala, Uganda (Head Office)</p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t py-10">
+        <Container className="flex flex-col items-center justify-between gap-4 md:flex-row">
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Max Drive Uganda Limited. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4 text-sm">
+            <a href="#trust" className="hover:underline">Payment Policy</a>
+            <a href="#" className="hover:underline">Terms</a>
+            <a href="#" className="hover:underline">Privacy</a>
+          </div>
+        </Container>
+      </footer>
+    </div>
+  );
+}
+```
+
+---
+
+## 4) Run instructions (Replit)
+
+* Ensure dependencies are installed (Replit packages sidebar should show `framer-motion` and `lucide-react`). If not, install them.
+* Click **Run** at the top. If needed, set the run command to `npm run dev`.
+* Show the preview URL and open the site in a new tab.
+
+---
+
+## 5) What I should be able to do
+
+* See a clean landing page with sections: **Hero, Services, How it Works, Trust/Banking, CTA, Contact, Footer**.
+* Click **Request a Quote** (goes to `/quote` placeholder for now).
+* Click **WhatsApp** to open chat to `+256708914167`.
+* The site must be responsive and minimal, with Tailwind classes rendered via CDN.
+
+---
+
+## 6) Follow‑up tasks (don’t do now, just leave TODO comments)
+
+* TODO: Add `/quote` page (multi‑step form) later.
+* TODO: Replace logo placeholder and set brand colors.
+* TODO: Hook to API when backend is ready.
+
+```
+```
