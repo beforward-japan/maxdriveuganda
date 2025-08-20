@@ -240,7 +240,7 @@ export default function Home() {
         </section>
 
         {/* PROCESS */}
-        <section id="process" className="border-b py-8 sm:py-12 md:py-16">
+        <section id="process" className="border-b py-8 sm:py-12 md:py-16 pt-[34px] pb-[34px]">
           <Container>
             <SectionTitle 
               eyebrow="How it works" 
