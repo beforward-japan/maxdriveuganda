@@ -333,26 +333,11 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {/* Banking Details */}
-              <div className="rounded-2xl border bg-card p-6 shadow-sm">
-                <h3 className="mb-6 text-lg font-semibold">Official Banking Details</h3>
-                <dl className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  {BANKS.map((bank) => (
-                    <div key={bank.label}>
-                      <dt className="text-xs uppercase tracking-wide text-muted-foreground">{bank.label}</dt>
-                      <dd className="text-sm font-medium" data-testid={`text-bank-${bank.label.toLowerCase().replace(/\s+/g, '-')}`}>
-                        {bank.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
-              </div>
-
-              {/* Benefits */}
-              <div className="rounded-2xl border bg-card p-6 shadow-sm">
-                <h3 className="mb-6 text-lg font-semibold">Why Choose Max Drive</h3>
-                <ul className="space-y-3">
+            {/* Benefits */}
+            <div className="mx-auto max-w-2xl">
+              <div className="rounded-2xl border bg-card p-8 shadow-sm">
+                <h3 className="mb-6 text-xl font-semibold text-center">Why Choose Max Drive</h3>
+                <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <span className="text-sm">Transparent quotations</span>
