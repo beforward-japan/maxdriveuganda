@@ -138,8 +138,10 @@ export default function Home() {
                 transition={{ duration: 0.6 }} 
                 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
                 data-testid="text-hero-title"
-              >From Dreams to Wheels,
-              Vehicle Import, Done Right.</motion.h1>
+              >
+                <div>From Dreams to Wheels</div>
+                <div className="text-3xl sm:text-4xl lg:text-5xl mt-2">Vehicle Import, Done Right</div>
+              </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
