@@ -21,6 +21,10 @@ import {
 } from "lucide-react";
 
 import Logo_PNG from "@assets/Logo PNG.png";
+import BeForwardLogo from "@assets/beforward-removebg-preview (1)_1755712664023.png";
+import StanmoreLogo from "@assets/logo_stanmore_holdings_1755712738680.gif";
+import TransfreightLogo from "@assets/Logo-1_1755712653982.png";
+import ConsolbaseLogo from "@assets/Logo-1_1755712677391.png";
 
 const Container = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
   <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-[45px] pb-[45px] pl-[36px] pr-[36px] ${className}`}>{children}</div>
@@ -85,10 +89,26 @@ const services = [
 ];
 
 const partnerships = [
-  "BeForward Japan",
-  "Stanmore Holdings", 
-  "Transfreight Logistics",
-  "Consolbase Limited"
+  { 
+    name: "BeForward Japan", 
+    url: "https://www.beforward.jp", 
+    logo: BeForwardLogo 
+  },
+  { 
+    name: "Stanmore Holdings", 
+    url: "https://www.stanmore.co.ke", 
+    logo: StanmoreLogo 
+  },
+  { 
+    name: "Transfreight Logistics", 
+    url: "https://transfreight.co.ke/", 
+    logo: TransfreightLogo 
+  },
+  { 
+    name: "Consolbase Limited", 
+    url: "https://www.consolbase.co.ke/", 
+    logo: ConsolbaseLogo 
+  }
 ];
 
 export default function Home() {
@@ -256,18 +276,30 @@ export default function Home() {
               title="Trusted Global Network" 
               subtitle="We work with established partners to ensure reliable sourcing and shipping." 
             />
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
               {partnerships.map((partner) => (
-                <motion.div
-                  key={partner}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  className="rounded-full bg-white border px-4 py-2 text-sm font-medium shadow-sm"
-                  data-testid={`tag-partner-${partner.toLowerCase().replace(/\s+/g, '-')}`}
+                <motion.a
+                  key={partner.name}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="group flex flex-col items-center gap-4 rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300"
+                  data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
-                  {partner}
-                </motion.div>
+                  <div className="flex h-16 w-full items-center justify-center">
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`} 
+                      className="max-h-16 max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
+                    {partner.name}
+                  </h3>
+                </motion.a>
               ))}
             </div>
           </Container>
