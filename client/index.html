@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Max Drive Uganda — Buy & Import Your Next Car</title>
+    <meta name="description" content="Max Drive Uganda Limited — sourcing, inspection, shipping, customs clearing, and registration with transparent quotations. Manual bank payments only." />
+    <meta property="og:title" content="Max Drive Uganda — Transparent Vehicle Import" />
+    <meta property="og:description" content="Source, ship, clear, and register — full price transparency and official bank payments only." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Max Drive Uganda" />
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "hsl(0, 0%, 100%)",
+              foreground: "hsl(222.2, 84%, 4.9%)",
+              muted: { 
+                DEFAULT: "hsl(210, 40%, 96.1%)", 
+                foreground: "hsl(215.4, 16.3%, 46.9%)" 
+              },
+              primary: { 
+                DEFAULT: "#F97316", 
+                foreground: "#ffffff" 
+              },
+              card: { 
+                DEFAULT: "#ffffff", 
+                foreground: "hsl(222.2, 84%, 4.9%)" 
+              },
+            },
+            borderRadius: { 
+              '2xl': '1rem' 
+            },
+            fontFamily: {
+              'sans': ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
