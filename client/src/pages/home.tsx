@@ -334,23 +334,95 @@ export default function Home() {
             </div>
 
             {/* Benefits */}
-            <div className="mx-auto max-w-2xl">
+            <div className="mx-auto max-w-4xl">
               <div className="rounded-2xl border bg-card p-8 shadow-sm">
-                <h3 className="mb-6 text-xl font-semibold text-center">Why Choose Max Drive</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">Transparent quotations</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">URA-compliant paperwork</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">End-to-end to number plates</span>
-                  </li>
-                </ul>
+                <h3 className="mb-8 text-xl font-semibold text-center">Why Choose Max Drive & Vehicle Import</h3>
+                
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {/* Max Drive Advantages */}
+                  <div>
+                    <h4 className="mb-4 text-lg font-semibold text-primary">Max Drive Advantages</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Transparent Quotations</span>
+                          <p className="text-xs text-muted-foreground mt-1">Complete cost breakdown with no hidden fees or surprises</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">URA-Compliant Paperwork</span>
+                          <p className="text-xs text-muted-foreground mt-1">All documentation handled professionally for smooth registration</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">End-to-End Service</span>
+                          <p className="text-xs text-muted-foreground mt-1">From sourcing to delivery with number plates attached</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">10+ Years Experience</span>
+                          <p className="text-xs text-muted-foreground mt-1">Proven track record with 1,000+ successful imports</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Official UNBS Inspections</span>
+                          <p className="text-xs text-muted-foreground mt-1">Government-standard quality assurance before shipping</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  {/* Import vs Local Benefits */}
+                  <div>
+                    <h4 className="mb-4 text-lg font-semibold text-primary">Import vs Local Advantages</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Better Pricing</span>
+                          <p className="text-xs text-muted-foreground mt-1">Save 20-40% compared to local bond prices with direct import</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Wider Selection</span>
+                          <p className="text-xs text-muted-foreground mt-1">Access to global inventory vs limited local stock options</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">First Owner Experience</span>
+                          <p className="text-xs text-muted-foreground mt-1">Be the first owner in Uganda with complete vehicle history</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Authentic Condition</span>
+                          <p className="text-xs text-muted-foreground mt-1">No hidden repairs or alterations to mask problems</p>
+                        </div>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <span className="text-sm font-medium">Complete Documentation</span>
+                          <p className="text-xs text-muted-foreground mt-1">Full auction reports and transparent condition history</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </Container>
