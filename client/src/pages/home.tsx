@@ -98,7 +98,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-white/70">
         <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <img src="/logo.png" alt="Max Drive Uganda" className="h-8 w-auto object-contain" />
+            <img src={Logo_PNG} alt="Max Drive Uganda" className="h-8 w-auto object-contain pl-[-52px] pr-[-52px]" />
           </div>
           <nav className="hidden items-center gap-6 md:flex">
             <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
