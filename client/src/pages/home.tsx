@@ -27,16 +27,16 @@ import TransfreightLogo from "@assets/Logo-1_1755712653982.png";
 import ConsolbaseLogo from "@assets/Logo-1_1755712677391.png";
 
 const Container = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
-  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 ${className}`}>{children}</div>
+  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 ${className}`}>{children}</div>
 );
 
 const SectionTitle = ({ eyebrow, title, subtitle }: { eyebrow?: string, title: string, subtitle?: string }) => (
-  <div className="mb-6 sm:mb-8 md:mb-10 text-center">
+  <div className="mb-4 sm:mb-6 md:mb-8 text-center">
     {eyebrow && (
-      <p className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">{eyebrow}</p>
+      <p className="mb-1 sm:mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary">{eyebrow}</p>
     )}
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">{title}</h2>
-    {subtitle && <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base text-muted-foreground">{subtitle}</p>}
+    {subtitle && <p className="mx-auto mt-1 sm:mt-2 max-w-2xl text-sm sm:text-base text-muted-foreground">{subtitle}</p>}
   </div>
 );
 
@@ -48,10 +48,10 @@ const Stat = ({ label, value }: { label: string, value: string }) => (
 );
 
 const FeatureCard = ({ icon: Icon, title, desc }: { icon: React.ElementType, title: string, desc: string }) => (
-  <div className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-md">
-    <div className="mb-4 inline-flex rounded-xl bg-primary/10 p-3 text-primary"><Icon className="h-6 w-6" /></div>
-    <h3 className="text-lg font-semibold">{title}</h3>
-    <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+  <div className="group rounded-2xl border bg-card p-4 sm:p-6 shadow-sm transition hover:shadow-md">
+    <div className="mb-3 sm:mb-4 inline-flex rounded-xl bg-primary/10 p-2 sm:p-3 text-primary"><Icon className="h-5 w-5 sm:h-6 sm:w-6" /></div>
+    <h3 className="text-base sm:text-lg font-semibold">{title}</h3>
+    <p className="mt-1 sm:mt-2 text-sm text-muted-foreground">{desc}</p>
   </div>
 );
 
@@ -150,7 +150,7 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden border-b">
-          <Container className="py-12 sm:py-16 md:py-20 lg:py-24">
+          <Container className="py-8 sm:py-12 md:py-16 lg:py-20">
             <div className="text-center">
               <motion.h1 
                 initial={{ opacity: 0, y: 10 }} 
@@ -166,14 +166,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, delay: 0.1 }} 
-                className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground"
+                className="mt-3 sm:mt-4 max-w-3xl mx-auto text-lg text-muted-foreground"
                 data-testid="text-hero-subtitle"
               >We provide end-end vehicle import—sourcing to delivery solutions for your personal and business needs.</motion.p>
               <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, delay: 0.2 }} 
-                className="mt-8 flex flex-wrap items-center justify-center gap-4"
+                className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
               >
                 <a 
                   href={QUOTE_LINK} 
@@ -196,7 +196,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, delay: 0.3 }} 
-                className="mt-6 flex items-center justify-center gap-2 rounded-xl border bg-muted/50 px-4 py-3 shadow-sm"
+                className="mt-3 sm:mt-4 flex items-center justify-center gap-2 rounded-xl border bg-muted/50 px-4 py-2 sm:py-3 shadow-sm"
               >
                 <Phone className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-muted-foreground">or call</span>
@@ -213,7 +213,7 @@ export default function Home() {
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="border-b py-12 sm:py-16 md:py-20">
+        <section id="services" className="border-b py-8 sm:py-12 md:py-16">
           <Container>
             <SectionTitle 
               eyebrow="Our Services" 
@@ -240,7 +240,7 @@ export default function Home() {
         </section>
 
         {/* PROCESS */}
-        <section id="process" className="border-b py-12 sm:py-16 md:py-20">
+        <section id="process" className="border-b py-8 sm:py-12 md:py-16">
           <Container>
             <SectionTitle 
               eyebrow="How it works" 
@@ -254,14 +254,14 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative rounded-2xl border bg-card p-5 shadow-sm hover:shadow-md transition-shadow"
+                  className="relative rounded-2xl border bg-card p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow"
                   data-testid={`card-process-step-${i + 1}`}
                 >
                   <span className="absolute -top-3 left-5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-sm">
                     {i + 1}
                   </span>
-                  <h4 className="mt-3 text-base font-semibold">{step.title}</h4>
-                  <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
+                  <h4 className="mt-2 sm:mt-3 text-sm sm:text-base font-semibold">{step.title}</h4>
+                  <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground">{step.text}</p>
                 </motion.li>
               ))}
             </ol>
@@ -269,7 +269,7 @@ export default function Home() {
         </section>
 
         {/* PARTNERSHIPS */}
-        <section id="partners" className="border-b py-12 sm:py-16 md:py-20 bg-muted/30">
+        <section id="partners" className="border-b py-8 sm:py-12 md:py-16 bg-muted/30">
           <Container>
             <SectionTitle 
               eyebrow="Official Partnerships" 
@@ -286,7 +286,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="group flex flex-col items-center gap-4 rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="group flex flex-col items-center gap-3 sm:gap-4 rounded-2xl border bg-white p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300"
                   data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <div className="flex h-12 w-full items-center justify-center">
@@ -306,7 +306,7 @@ export default function Home() {
         </section>
 
         {/* TRUST & SAFETY */}
-        <section id="trust" className="border-b py-12 sm:py-16 md:py-20">
+        <section id="trust" className="border-b py-8 sm:py-12 md:py-16">
           <Container>
             <SectionTitle 
               eyebrow="Trust & Safety" 
@@ -315,9 +315,9 @@ export default function Home() {
             />
             
             {/* Payment Policy Bullets */}
-            <div className="mb-8 sm:mb-10 md:mb-12 rounded-2xl border bg-card p-6 sm:p-8 shadow-sm">
-              <h3 className="mb-6 text-xl font-semibold text-center">Payment Policy</h3>
-              <ul className="space-y-4 max-w-3xl mx-auto">
+            <div className="mb-6 sm:mb-8 rounded-2xl border bg-card p-4 sm:p-6 shadow-sm">
+              <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl font-semibold text-center">Payment Policy</h3>
+              <ul className="space-y-3 sm:space-y-4 max-w-3xl mx-auto">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Payments are accepted only via our official MDL bank accounts or direct TT to Japan.</span>
@@ -335,8 +335,8 @@ export default function Home() {
 
             {/* Benefits */}
             <div className="mx-auto max-w-4xl">
-              <div className="rounded-2xl border bg-card p-6 sm:p-8 shadow-sm">
-                <h3 className="mb-8 text-xl font-semibold text-center">Why Choose Max Drive & Vehicle Import</h3>
+              <div className="rounded-2xl border bg-card p-4 sm:p-6 shadow-sm">
+                <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl font-semibold text-center">Why Choose Max Drive & Vehicle Import</h3>
                 
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {/* Max Drive Advantages */}
@@ -429,7 +429,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-12 sm:py-16 md:py-20">
+        <section id="contact" className="py-8 sm:py-12 md:py-16">
           <Container>
             <SectionTitle 
               eyebrow="Get Started" 
