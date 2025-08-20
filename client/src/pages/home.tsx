@@ -75,7 +75,7 @@ const steps = [
 const services = [
   { icon: Search, title: "Vehicle Sourcing", desc: "Professional vehicle selection based on your budget and requirements, with quality and history checks. Sourcing from partners in Japan, UK, UAE, Thailand and other locations." },
   { icon: FileText, title: "Transparent Quotation", desc: "Complete cost breakdown with no hidden fees or surprises from C&F Prices, Clearance costs, Delivery Charges, Precise Duty, Tax and Registration Estimates." },
-  { icon: ShieldCheck, title: "Pre-shipping Inspection", desc: "Thorough inspection and condition verification before shipping." },
+  { icon: ShieldCheck, title: "Pre-shipping Inspection", desc: "Official Pre-Shipping Inspection with UNBS Agents, Transparent condition reports and Auction reports." },
   { icon: Ship, title: "Shipping", desc: "Reliable RoRo and container shipping with tracking and updates." },
   { icon: Package, title: "Port Clearance & Storage (Mombasa or Tanzania)", desc: "Professional customs clearance and secure port storage." },
   { icon: ClipboardList, title: "Registration & Number Plates", desc: "Complete URBS registration and number plate processing." },
