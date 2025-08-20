@@ -98,7 +98,7 @@ export default function Home() {
       <header className="sticky top-0 z-40 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-white/70">
         <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <img src={Logo_PNG} alt="Max Drive Uganda" className="h-9 w-9 rounded-2xl object-contain pl-[83px] pr-[83px]" />
+            <img src="/logo.png" alt="Max Drive Uganda" className="h-8 w-auto object-contain" />
           </div>
           <nav className="hidden items-center gap-6 md:flex">
             <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
@@ -460,7 +460,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="Max Drive Uganda" className="h-9 w-9 rounded-2xl object-contain" />
+                <img src="/logo.png" alt="Max Drive Uganda" className="h-8 w-auto object-contain" />
                 <span className="text-lg font-bold tracking-tight">Max Drive Uganda Ltd</span>
               </div>
               <p className="text-sm text-muted-foreground max-w-md">
