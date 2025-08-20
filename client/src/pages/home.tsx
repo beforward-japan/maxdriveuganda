@@ -95,6 +95,9 @@ export default function Home() {
       {/* NAVBAR */}
       <header className="sticky top-0 z-40 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-white/70">
         <Container className="flex h-16 items-center justify-between">
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Max Drive Uganda" className="h-9 w-9 rounded-2xl object-contain" />
+          </div>
           <nav className="hidden items-center gap-6 md:flex">
             <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
             <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Process</a>
