@@ -289,11 +289,11 @@ export default function Home() {
                   className="group flex flex-col items-center gap-4 rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300"
                   data-testid={`link-partner-${partner.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
-                  <div className="flex h-16 w-full items-center justify-center">
+                  <div className="flex h-12 w-full items-center justify-center">
                     <img 
                       src={partner.logo} 
                       alt={`${partner.name} logo`} 
-                      className="max-h-16 max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      className="max-h-10 max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <h3 className="text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">
