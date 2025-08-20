@@ -146,11 +146,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, delay: 0.1 }} 
-                className="mt-6 max-w-3xl mx-auto text-lg text-muted-foreground"
+                className="max-w-3xl mx-auto text-lg text-muted-foreground ml-[39.9091px] mr-[39.9091px] mt-[11px] mb-[11px]"
                 data-testid="text-hero-subtitle"
-              >
-                Max Drive Uganda Limited sources, ships, clears, registers, and delivers your vehicle with transparent pricing and official banking only.
-              </motion.p>
+              >We provide end-end vehicle import—sourcing to delivery solutions for your personal and business needs.</motion.p>
               <motion.div 
                 initial={{ opacity: 0, y: 10 }} 
                 animate={{ opacity: 1, y: 0 }} 
