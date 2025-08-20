@@ -81,7 +81,7 @@ const services = [
   { icon: ClipboardList, title: "Registration & Number Plates", desc: "Complete URBS registration and number plate processing." },
   { icon: Truck, title: "Transport — Driven or Car Carrier", desc: "Safe vehicle transport via professional drivers or car carriers." },
   { icon: Car, title: "Delivery", desc: "Secure delivery to your preferred location with all documentation." },
-  { icon: Wrench, title: "After-Sales Support — Servicing, Car wash, Minor repairs, customisations & add-ons", desc: "Ongoing support for maintenance, customization and additional services." },
+  { icon: Wrench, title: "After-Sales Support", desc: "Servicing, Car wash, Minor repairs, customisations & add-ons. Ongoing support for maintenance, customization and additional services." },
 ];
 
 const partnerships = [
